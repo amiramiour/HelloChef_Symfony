@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <h2>Nos recettes</h2>
+        {% if selectedData is not empty %}
+            {% for recette in selectedData %}
+                <div class="recipe">
+                    <h3>{{ recette.nom }}</h3>
+                    <p>{{ recette.description }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="recipe">
+                <p>Aucune recette trouvée.</p>
+            </div>
+        {% endif %}
+        
+    </div>
+{% endblock %}

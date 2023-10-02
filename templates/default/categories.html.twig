@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div class="content">
+        {% if categorie is not empty %}
+            {% for categories in categorie %}
+                <div class="recipe">
+                    <h3>{{ categories.nom }}</h3>
+
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="recipe">
+                <p>Aucune categorie trouvée.</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

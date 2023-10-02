@@ -1,0 +1,238 @@
+/* Style global de la page */
+body {
+    background-color: #f5f8fa;
+    font-family:   'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #1D3124;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+}
+header a:hover {
+    color: #f5f8fa;
+    background-color: #1D3124;
+
+}
+
+/* Style du menu de navigation */
+
+
+nav {
+    background-color: #1D3124;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    background-color: #1D3124;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: #fff;
+    border-radius: 8px;
+    color: #1D3124;
+}
+
+
+
+/* Style du contenu de la page */
+.content {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #1D3124;
+    width: 100%;
+    margin-top: 0;
+
+}
+
+.recipe {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+.recipe:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+
+}
+
+.recipe h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #E59560;
+}
+
+.recipe p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Footer */
+
+footer {
+    background-color: #f5f8fa;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer li:last-child {
+    margin-right: 0;
+}
+
+footer a {
+    color: #E59560;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #f5f8fa;
+    background-color: #1D3124;
+}
+.login-btn {
+    background-color: #E59560;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* _______________________________ */
+.myform {
+   
+    max-width: 330px;
+    padding: 15px;
+    margin:  auto;
+}
+
+.myform control {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.myform h2{
+
+
+    color: #E59560;
+    justify-content: center;
+    margin-left: 60px;
+
+}
+
+.myform label {
+    
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.myform input {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.myform button {
+    
+    margin-left: 65px;
+    background-color: #E59560;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.myform button:hover {
+    background-color: #1D3124;
+    border-color: #1D3124;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+    .recipe {
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .recipe {
+        width: 32%;
+    }
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div class="content">
+        {% if recettes is not empty %}
+            {% for recette in recettes %}
+                <div class="recipe">
+                    <h3>{{ recette.nom }}</h3>
+                    <p>{{ recette.description }}</p>
+                    <a href="{{ path('app_recette' , {slug:recette.slug}) }}">En savoir plus</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="recipe">
+                <p>Aucune recette trouvée.</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

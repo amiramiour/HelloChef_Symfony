@@ -1,0 +1,23 @@
+{% extends '/base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="recipe">
+        <h1 >{{recette.nom}}</h1>
+        <p>{{ recette.description }}</p>
+        <h4>Les autres recette de la meme catégorie :</h4>
+        {% if otherRecettes is not empty %}
+            {% for recette in otherRecettes %}
+                <li>
+                    <a class="icon solid fa-cog" href="{{ path('app_recettes', {slug:recette.slug}) }}">{{ recette.nom }}</a></li>
+            {% endfor %}
+        </div>
+        {% else %}
+            <div class="recipe">
+                <p>Aucune autre recette de la meme catégorie etait trouvée.</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

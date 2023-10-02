@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}RECETTES{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+<header>
+    <h1>Gestion de recettes</h1>
+    <a href="{{ path('app_login') }}">Se connecter</a>
+</header>
+<nav>
+    <ul>
+        <li><a href="{{ path('app_homepage') }}">Accueil</a></li>
+        <li><a href="{{ path('app_recettes') }}">Recettes</a></li>
+        <li><a href="{{ path('app_categories') }}">Catégories</a></li>
+        <li><a href="#">A propos</a></li>
+    </ul>
+</nav>
+{% block body %}{% endblock %}
+<footer>
+    <p>&copy; 2023 Gestion de recettes. Tous droits réservés.</p>
+    <ul>
+        <li><a href="#">Conditions d'utilisation</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+        <li><a href="#">Contactez-nous</a></li>
+    </ul>
+</footer>
+</body>
+</html>
